@@ -34,6 +34,7 @@ header{
 .vertical-navbar a.active{
     background-color: lightblue;
     color: white;
+    
 }
 
 /*Horizontal navigation bar*/
