@@ -5,18 +5,20 @@ import java.util.ArrayList;
 public class FizzBuzz {
 
 	public static void main(String[] args) {
-		out.println(fizzBuzz().toString());
+		out.println(fizzBuzz(100));
 	}
 	
-	public static ArrayList<String> fizzBuzz(){
+	private static ArrayList<String> fizzBuzz(int upperLimit){
+		// Initialize ArrayList
 		ArrayList<String> mant = new ArrayList<String>();
 		
-		for(int i = 1; i <= 100; ++i){
+		for(int i = 1; i <= upperLimit; ++i){
 			String tmp = "";
 			
 			boolean multipleof3 = (i % 3 == 0);
 			boolean multipleof5 = (i % 5 == 0);
 			
+			//Logic to append words to tmp
 			if(multipleof3) {
 				tmp += "Fizz";
 			}
@@ -29,6 +31,7 @@ public class FizzBuzz {
 				tmp += Integer.toString(i);
 			}
 			
+			//Add tmp to the ArrayList to return
 			mant.add(tmp);
 		}
 		
