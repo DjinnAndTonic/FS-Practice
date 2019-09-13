@@ -9,7 +9,7 @@
     <title>Log On</title>
 </head>
 <body>
-    <form action="MyServlet">
+    <form>
         Username:<br>
         <input type="text" name="userName"><br>
         Password:<br>
