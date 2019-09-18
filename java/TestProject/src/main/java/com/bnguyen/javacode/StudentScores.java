@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class StudentScores {
-	// instantiate global int array with 24 indices
+	// instantiate static int array with 24 indices
 	private static int[] scores = new int[24];
 	
 	public static void main(String[] args) {
@@ -69,17 +69,13 @@ public class StudentScores {
 		for(int i : scores)
 			System.out.print(i + " ");
 		
-		System.out.println();
-		
-		System.out.println("\nSorted List of Scores (Ascending):");
+		System.out.println("\n\nSorted List of Scores (Ascending):");
 		
 		sort(scores);
 		for (int i : scores)
 			System.out.print(i + " ");
 		
-		System.out.println();
-		System.out.println();
-		System.out.println("Max Score: " + scores[23]);
+		System.out.println("\n\n\nMax Score: " + scores[23]);
 		System.out.println("Min Score: " + scores[0]);
 	}
 
