@@ -36,6 +36,10 @@ public class Queues {
 		return tmp;
 	}
 	
+	public void peek() {
+		System.out.println( (isEmpty()) ? "No items in queue!" : mant[0]);
+	}
+	
 //	Checks to see if queue is full
 	public boolean isFull() {
 		return (index == size);
@@ -74,7 +78,8 @@ public class Queues {
 		}
 		
 		System.out.println("Queue after operation: " + q);
-		System.out.println("\n\nDequeue-ing");
+		q.peek();
+		System.out.println("\nDequeue-ing");
 		
 		int size = q.size();
 		
@@ -84,5 +89,6 @@ public class Queues {
 		}
 		
 		System.out.println("Queue after operation: " + q);
+		q.peek();
 	}
 }
