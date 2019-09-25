@@ -1,0 +1,120 @@
+{
+  "id": "3f36d9d3-54a8-48c3-a9b2-b0c61a73068c",
+  "version": "2.0",
+  "name": "PerScholasTest",
+  "url": "https://perscholas.org",
+  "tests": [{
+    "id": "cf1fe6bc-2683-4407-ac64-4f36a2774ed5",
+    "name": "PerScholasTest",
+    "commands": [{
+      "id": "75de072e-5bb3-4117-a053-bb5a72d8bff1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a74fb35-c399-47c2-9a76-13224ffb5bc5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e14ece24-61ff-4e19-8b96-c7c9ad7cac59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown > #mapToggle",
+      "targets": [
+        ["css=.dropdown > #mapToggle", "css:finder"],
+        ["xpath=(//a[contains(text(),'Atlanta')])[2]", "xpath:link"],
+        ["xpath=(//a[@id='mapToggle'])[2]", "xpath:attributes"],
+        ["xpath=//header[@id='header']/nav/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#mapControls')])[2]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e50efed4-8a4f-4ef8-8568-64a6a28327a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active > a",
+      "targets": [
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Atlanta, GA')]", "xpath:link"],
+        ["xpath=//div[@id='mapControls']/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://perscholas.org/?city=atlanta')]", "xpath:href"],
+        ["xpath=//div/div/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd0c3216-8726-4348-89be-a637795a463d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1076)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3599e0c3-5393-41e6-879e-f978358c7c61",
+      "comment": "",
+      "command": "click",
+      "target": "css=h3:nth-child(1)",
+      "targets": [
+        ["css=h3:nth-child(1)", "css:finder"],
+        ["xpath=//footer[@id='footer']/div/div/div/div[2]/address/h3", "xpath:idRelative"],
+        ["xpath=//address/h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f069bdc2-f006-433f-98b6-c7af5fc69e33",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3:nth-child(1)",
+      "targets": [
+        ["css=h3:nth-child(1)", "css:finder"],
+        ["xpath=//footer[@id='footer']/div/div/div/div[2]/address/h3", "xpath:idRelative"],
+        ["xpath=//address/h3", "xpath:position"]
+      ],
+      "value": "ATLANTA"
+    }, {
+      "id": "1da089d4-824f-48b6-a808-07c001ac7679",
+      "comment": "",
+      "command": "click",
+      "target": "css=address",
+      "targets": [
+        ["css=address", "css:finder"],
+        ["xpath=//footer[@id='footer']/div/div/div/div[2]/address", "xpath:idRelative"],
+        ["xpath=//address", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b44135d-a668-4b02-aea3-bf87a2a0096d",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=address",
+      "targets": [
+        ["css=address", "css:finder"],
+        ["xpath=//footer[@id='footer']/div/div/div/div[2]/address", "xpath:idRelative"],
+        ["xpath=//address", "xpath:position"]
+      ],
+      "value": "address"
+    }, {
+      "id": "deb57891-ccb1-4ada-bdc0-97340b4b9489",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b9a51e1a-4642-47e9-979a-732adaf8fe1b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://perscholas.org/"],
+  "plugins": []
+}

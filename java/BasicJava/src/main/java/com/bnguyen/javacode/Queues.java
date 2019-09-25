@@ -36,6 +36,7 @@ public class Queues {
 		return tmp;
 	}
 	
+//	Look at the first item in the queue
 	public void peek() {
 		System.out.println( (isEmpty()) ? "No items in queue!" : mant[0]);
 	}
@@ -55,6 +56,8 @@ public class Queues {
 		return index;
 	}
 	
+//	Returns a string representation of "Queues" object
+//	Returns a String that contains the contents of the queue
 	public String toString() {
 		String str = "";
 		
