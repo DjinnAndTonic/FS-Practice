@@ -14,7 +14,7 @@ public class BasicsA {
 //		printLoopExercise();
 //		printStringExercise2();
 //		printArrayExercise();
-		printRegexExercise();
+//		printRegexExercise();
 	}
 	
 	public static void printVariableExcercise() {
@@ -543,7 +543,7 @@ public class BasicsA {
 		for(String s : searchFound) {
 			m = p.matcher(s);
 			if(m.find())
-				System.out.println("I fount it! " + s);
+				System.out.println("I found it! " + s);
 		}
 		
 		/*Write a program that returns the number of times the character 
