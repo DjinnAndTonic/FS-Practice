@@ -14,7 +14,7 @@ public class BasicsA {
 //		printLoopExercise();
 //		printStringExercise2();
 //		printArrayExercise();
-//		printRegexExercise();
+		printRegexExercise();
 	}
 	
 	public static void printVariableExcercise() {
@@ -167,7 +167,7 @@ public class BasicsA {
 		 * value and binary string. Now, print out x in decimal form and in 
 		 * binary notation*/
 		System.out.println("\nShift Left");
-		int x = 2;
+		int x = 1;
 		System.out.println("2 to binary: " + Integer.toBinaryString(x));
 		x = x << 1;
 		// Predicted value : 4
@@ -414,6 +414,13 @@ public class BasicsA {
 	}
 	
 	public static void printStringExercise2() {
+		/*Write a program that creates a StringBuilder object named sb and 
+		 * initializes it with “Hello”. Print out sb. Now use the append( ) 
+		 * method to append “ World!” to sb and print out sb again. Append 
+		 * “ World” again to sb. Print out sb. Next, use the insert( ) method 
+		 * to insert the string “ New” in between “Hello” and “ World”. Next, 
+		 * use the replace( ) method to change “ New” to “ Old”. Print the 
+		 * result. Finally, use the reverse( ) method to reverse the entire string.*/
 		System.out.println("\nString Builder");
 		StringBuilder sb = new StringBuilder("Hello");
 		System.out.println(sb);
@@ -423,18 +430,19 @@ public class BasicsA {
 		System.out.println(sb.replace(5, 8, "Old"));
 		System.out.println(sb.reverse());
 		
+		/*Write a program that uses a loop to reverse the characters of a String 
+		 * object (e.g., “hello” becomes “olleh”).*/
 		System.out.println("\nReversing a String");
 		String revString = "Reverse This";
 		for(int i = revString.length()-1; i >= 0; --i) {
 			System.out.print(revString.charAt(i));
 		}
 		
-		System.out.println("\nReverse Words in String");
-		
 		/*Write a program that uses loops without the reverse( )
 		 * method to take a multi-word string and reverse each 
 		 * word but keep the same word order in the string 
 		 * (e.g., “Hello world!” would become “olleH !dlrow”).*/
+		System.out.println("\nReverse Words in String");
 		String[] wrds = revString.split(" ");
 		for(String w : wrds) {
 			for(int i = w.length()-1; i >= 0; --i) {
@@ -559,15 +567,21 @@ public class BasicsA {
 		
 		/*Write a program that tests if a string represents a valid css 
 		 * hexadecimal color such as “#2255aa” or “#253”*/
-		String testCss = "";
+		final String VALID_COLOR_PATTERN = "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$";
+		Pattern pattern = Pattern.compile(VALID_COLOR_PATTERN);
+		String testCss = "#ABACAF";
+		Matcher matcher = pattern.matcher(testCss);
 		
-//		System.out.println(()?);
+		System.out.println((matcher.matches())? testCss + " is a valid hexadecimal color." :
+			testCss + " is NOT a valid hexadecimal color.");
 	}
 	
+	// Fibonnaci sequence method. Takes an integer arg, returns the arg's fibonacci number
+	// fibo(1) will return 1
 	static int fibo(int n) 
     { 
         int tmp = 0, x = 1, y; 
-        if (n == 0) 
+        if (n == 0)  
             return tmp; 
         for (int i = 2; i <= n; i++) 
         { 
@@ -575,6 +589,6 @@ public class BasicsA {
             tmp = x; 
             x = y; 
         } 
-        return x; 
+        return x;
     } 
 }
