@@ -1,7 +1,6 @@
 package com.perscholas.file;
 
 public class ClubMember {
-	// NAME**CITY**STATE**FAVORITE PROGRAMMING LANGUAGE
 	private String name, city, state, lang;
 	
 	public ClubMember() {

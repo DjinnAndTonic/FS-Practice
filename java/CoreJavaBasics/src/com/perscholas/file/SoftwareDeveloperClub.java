@@ -46,8 +46,9 @@ public class SoftwareDeveloperClub {
 				addMember();
 				continue;
 			}
-			else if(choice == 4) 
+			else if(choice == 4) {
 				System.out.println("Goodbye!");
+			}
 			else {
 				System.out.println("Invalid choice.");
 				continue;

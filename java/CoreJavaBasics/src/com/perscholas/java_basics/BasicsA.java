@@ -14,7 +14,7 @@ public class BasicsA {
 //		printLoopExercise();
 //		printStringExercise2();
 //		printArrayExercise();
-		printRegexExercise();
+//		printRegexExercise();
 	}
 	
 	public static void printVariableExcercise() {
@@ -502,6 +502,15 @@ public class BasicsA {
 		 * order, print the smallest and the largest element of the 
 		 * array.*/
 		
+		/* What I wrote is essentially a 'bubble sort'
+		* My thought process:
+		* Need to swap elements in an array, so I need a temp variable.
+		* Swapping two elements is simple.
+		* How do I know when the array is sorted?
+		* 	When I no longer need to swap/when no swaps can be made.
+		* How do I know if all of the swapping is done?
+		* 	Create a flag (boolean)
+		* 	Keep sorting/swapping until the flag is raised (i.e. boolean is TRUE)*/
 		int[] sortThis = {4, 2, 9, 13, 1, 0};
 		boolean sorted = false;
 		while(!sorted) {

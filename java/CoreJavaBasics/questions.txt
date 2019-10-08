@@ -1,0 +1,30 @@
+QUIZ QUESTIONS
+What is hardware?
+a)virtual machine
+b)the physical machine
+c)applications such as browsers
+d)part of the processor
+
+What does counter++; do?
+a)Adds 1 to counter
+b)Adds 2 to counter
+c)Gets the sum
+d)Multiplies the numbers
+
+What is a loop that never stops?
+a)For Loop
+b)Infinite Loop
+c)Do-While Loop
+d)Full Loop
+
+What is an array?
+a)Numbers of items ArrayList can store without increasing its size
+b)Number used as an index to pinpoint a specific element within an array
+c)Object that can store a group of values, all of the same type
+d)Method of locating a specific item in a larger collection of data
+
+You use this statement to throw an exception manually.
+a)throw
+b)call stack
+c)try block
+d)thrown
