@@ -12,11 +12,14 @@ import java.io.File;
 
 public class Quiz {
 	private static ArrayList<Question> quizList = new ArrayList<Question>();
+	private static int numCorrect = 0;
 	
 	public static void main(String[] args) throws IOException {
 		makeDir();
 		createQuiz();
-//		startQuiz();
+		startQuiz();
+		
+		System.out.println("You got " + numCorrect + " out of 5.");
 	}
 	
 	public static void makeDir() {
@@ -53,24 +56,17 @@ public class Quiz {
 					}
 					else if(count < 5) {
 						ans[count-1] = tmp;
-//						System.out.println(ans[count-1]);
+
 						count++;
 						if(count > 4) {
-//							System.out.println("Array of answers: " + Arrays.toString(ans));
-							count = 0;
 							Question q = new Question(question, ans);
-//							System.out.println("Question added:\n\"" + q + "\"");
-							
 							quizList.add(q);
-//							System.out.println("Question to string" + q.toString());
-//							System.out.println(quizList.size());
+							count = 0;
+							ans = new String[4];
 						}	
 					}
 				}
 			}
-			System.out.println("Quiz List: " + quizList.size());
-			for(Question q: quizList)
-				System.out.println(q);
 			
 			scan.close();
 			
@@ -96,14 +92,21 @@ public class Quiz {
 		FileWriter fw = new FileWriter(".\\quiz_answers\\answers_"+name.toLowerCase()+".txt");
 		
 		for(int i = 0; i < quizList.size(); ++i) {
+			Question currentQuestion = quizList.get(i);
 			System.out.println("Question " + (i+1) + "\n" +
-						quizList.get(i));
+						currentQuestion.getQuestion() + "\n" +
+						currentQuestion.getChoices());
 			System.out.print("Answer choice :: ");
 			String ans = scan.nextLine().trim();
+			
+			if(ans.charAt(0) == quizList.get(i).getCorrectAnswer())
+				numCorrect++;
 			
 			System.out.println();
 			fw.write("Q" + (i+1) + ": " + ans + "\n");
 		}
+		
+		fw.append("Number correct: " + numCorrect);
 		fw.close();
 		scan.close();
 	}
