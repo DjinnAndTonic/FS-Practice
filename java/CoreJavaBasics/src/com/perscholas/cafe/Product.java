@@ -4,7 +4,7 @@ public abstract class Product {
 	private String name, desc;
 	private double price;
 	private int quantity;
-	final protected double SALES_TAX = 0.0865;
+	final protected double SALES_TAX = 0.0625;
 	public Product() {
 		super();
 	}
@@ -51,4 +51,7 @@ public abstract class Product {
 //	{
 //		return price * quantity + (price * quantity * SALES_TAX);
 //	}
+	public abstract double calculateSubTotal();	
+	public abstract void addOptions(boolean b1, boolean b2);
+	public abstract void printOptions();
 }

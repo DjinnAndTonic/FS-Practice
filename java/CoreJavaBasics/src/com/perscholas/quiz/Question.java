@@ -1,4 +1,4 @@
-package com.perscholas.file;
+package com.perscholas.quiz;
 
 public class Question {
 	private String question;

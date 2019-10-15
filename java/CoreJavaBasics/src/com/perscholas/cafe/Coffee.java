@@ -4,13 +4,13 @@ public class Coffee extends Product{
 	private boolean sugar, milk;
 	
 	public Coffee() {
-		super();
+		super("Coffee", 3.75, "Something bitter.");
 		sugar = false;
 		milk = false;
 	}
 	
 	public Coffee(String n, double p, String d, boolean s, boolean m) {
-		super(n,p,d);
+		super(n,3.75,d);
 		sugar = s;
 		milk = m;
 	}
@@ -37,4 +37,30 @@ public class Coffee extends Product{
 		return getPrice() * getQuantity() + (getPrice() * getQuantity() * super.SALES_TAX);
 	}
 
+	@Override
+	public void addOptions(boolean b1, boolean b2) {
+		// TODO Auto-generated method stub
+		sugar = b1;
+		milk = b2;
+	}
+
+	@Override
+	public void printOptions() {
+		System.out.println("Item: \tCoffee\t\tPrice: $" + this.getPrice() + "\tQty: " + 
+				this.getQuantity() + "\tSubtotal: $" + this.calculateSubTotal());
+		System.out.print("\tSugar: ");
+		System.out.print((sugar)? "Yes" : "No");
+		System.out.print("\t");
+		System.out.print("Milk: ");
+		System.out.print((milk)? "Yes" : "No");
+		System.out.println();
+		
+	}
+
+	@Override
+	public double calculateSubTotal() {
+		double itemPrice = this.getPrice();
+		
+		return itemPrice * this.getQuantity();
+	}
 }

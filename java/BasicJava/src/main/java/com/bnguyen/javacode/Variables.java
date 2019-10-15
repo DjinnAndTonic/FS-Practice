@@ -24,4 +24,5 @@ public class Variables {
 			System.out.print(mant[i] + " ");
 		}
 	}
+
 }

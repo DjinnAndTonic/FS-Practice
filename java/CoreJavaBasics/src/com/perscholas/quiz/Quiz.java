@@ -1,8 +1,7 @@
-package com.perscholas.file;
+package com.perscholas.quiz;
 
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,7 +18,7 @@ public class Quiz {
 		createQuiz();
 		startQuiz();
 		
-		System.out.println("You got " + numCorrect + " out of 5.");
+		System.out.println("You got " + numCorrect + " out of " + quizList.size() + ".");
 	}
 	
 	public static void makeDir() {
@@ -47,6 +46,7 @@ public class Quiz {
 			
 			int count = 0;
 			while(scan.hasNext()) {
+				
 				String tmp = scan.nextLine();
 				
 				if(!tmp.isEmpty()) {
@@ -59,13 +59,13 @@ public class Quiz {
 
 						count++;
 						if(count > 4) {
-							Question q = new Question(question, ans);
-							quizList.add(q);
+							quizList.add(new Question(question, ans));
 							count = 0;
 							ans = new String[4];
 						}	
 					}
 				}
+				
 			}
 			
 			scan.close();
@@ -81,6 +81,7 @@ public class Quiz {
 
 		System.out.print("Enter your name:: ");
 		String name = scan.nextLine();
+		System.out.println();
 		
 		String filename = "quiz_answers\\answers_"+name.toLowerCase()+".txt";
 		String cwd = System.getProperty("user.dir");
@@ -106,7 +107,8 @@ public class Quiz {
 			fw.write("Q" + (i+1) + ": " + ans + "\n");
 		}
 		
-		fw.append("Number correct: " + numCorrect);
+		fw.append("Score: " + numCorrect + "/" + quizList.size() + 
+				" (" + (double)numCorrect/quizList.size() * 100 + "%)");
 		fw.close();
 		scan.close();
 	}

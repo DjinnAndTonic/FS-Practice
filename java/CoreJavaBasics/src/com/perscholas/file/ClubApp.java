@@ -5,6 +5,4 @@ public class ClubApp {
 		SoftwareDeveloperClub sdc = new SoftwareDeveloperClub();
 		sdc.menu();
 	}
-	
-	
 }
