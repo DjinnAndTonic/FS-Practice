@@ -1,8 +1,0 @@
-John :: 100.0
-Jimmy :: 100.0
-Ronald :: 100.0
-Tim :: 70.0
-
-Highest Score: 100.0
-Lowest Score: 70.0
-Average Score: 92.5
