@@ -1,0 +1,6 @@
+PRODUCT-NAME QUANTITY
+Coca-cola 2
+Pepsi 5
+Sprite 3
+Fanta 2
+Pibb 1
