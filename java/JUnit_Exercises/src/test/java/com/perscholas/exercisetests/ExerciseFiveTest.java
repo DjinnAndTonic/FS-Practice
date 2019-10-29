@@ -64,7 +64,7 @@ public class ExerciseFiveTest {
 	}
 	
 	@Test(expected = MaximumQuantityExceededException.class)
-	public void testMaximumQuantiyt() throws MaximumQuantityExceededException{
+	public void testMaximumQuantity() throws MaximumQuantityExceededException{
 		product.setAvailableQuantity(1000000);
 	}
 	
