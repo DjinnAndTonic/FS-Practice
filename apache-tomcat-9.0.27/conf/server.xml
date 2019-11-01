@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\Student\Desktop\Per-Scholas\apache-tomcat-9.0.27\wtpwebapps\Servlet-Exercises" path="/Servlet-Exercises" reloadable="true" source="org.eclipse.jst.jee.server:Servlet-Exercises"/><Context docBase="C:\Users\Student\Desktop\Per-Scholas\apache-tomcat-9.0.27\wtpwebapps\IntroJSP" path="/IntroJSP" reloadable="true" source="org.eclipse.jst.jee.server:IntroJSP"/></Host>
+      <Context docBase="C:\Users\Student\Desktop\Per-Scholas\apache-tomcat-9.0.27\wtpwebapps\IntroJSP" path="/IntroJSP" reloadable="true" source="org.eclipse.jst.jee.server:IntroJSP"/><Context docBase="C:\Users\Student\Desktop\Per-Scholas\apache-tomcat-9.0.27\wtpwebapps\LoginWithSession" path="/LoginWithSession" reloadable="true" source="org.eclipse.jst.jee.server:LoginWithSession"/><Context docBase="C:\Users\Student\Desktop\Per-Scholas\apache-tomcat-9.0.27\wtpwebapps\BeanPractice" path="/BeanPractice" reloadable="true" source="org.eclipse.jst.jee.server:BeanPractice"/><Context docBase="C:\Users\Student\Desktop\Per-Scholas\apache-tomcat-9.0.27\wtpwebapps\ServletExercises" path="/ServletExercises" reloadable="true" source="org.eclipse.jst.jee.server:ServletExercises"/></Host>
     </Engine>
   </Service>
 </Server>
