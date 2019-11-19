@@ -19,17 +19,10 @@ public class HomeServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/* The action string will be assigned the URL route and determine which 
-		 * servlet method gets called by using a switch block. */
 		String action = null;
 		String servletPath = request.getServletPath();
 		String pathInfo = request.getPathInfo();
 		
-		/* If there are no characters after the servlet path (pathInfo will be 
-		 * null) or if the servlet path is followed by a single "/" then the action 
-		 * string will be assigned only the servlet path. If there is a slash 
-		 * followed by any characters, then the action string will be assigned the 
-		 * servlet path plus the additional path information. */
 		if (pathInfo == null || pathInfo.equals("/")) {
 			action = servletPath;
 		} else {

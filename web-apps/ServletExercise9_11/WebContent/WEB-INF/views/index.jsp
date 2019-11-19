@@ -17,7 +17,7 @@
 	<h1>Index</h1>
 	<p>Hello! The current date and time is: 
 	<%
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM-dd-yyyy h:mm a");
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM d, yyyy h:mm a");
 		LocalDateTime now = LocalDateTime.now();
 		
 		String formattedLDT = now.format(dtf);
