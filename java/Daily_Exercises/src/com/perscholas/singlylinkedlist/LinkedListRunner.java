@@ -13,12 +13,26 @@ public class LinkedListRunner {
 		System.out.println(sll + "size: " + sll.getLength());
 		
 		System.out.println();
-		sll.remove(1);
+		sll.remove(0);
 		System.out.println(sll + "size: " + sll.getLength());
 		
 		System.out.println();
 		sll.add(10, 0);
 		System.out.println(sll + "size: " + sll.getLength());
 		
+		System.out.println();
+		sll.add(15, 0);
+		System.out.println(sll + "size: " + sll.getLength());
+		
+		System.out.println();
+		sll.removeByValue(5);
+		System.out.println(sll + "size: " + sll.getLength());
+		
+		
+		System.out.println();
+		
+		SinglyLinkedList l2 = new SinglyLinkedList();
+		l2.add(123);
+		System.out.println(l2 + "size: " + l2.getLength());
 	}
 }
