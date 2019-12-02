@@ -35,6 +35,7 @@ public class AdController {
 		return "login";
 	}
 	
+	@Valid
 	@GetMapping("/register")
 	public String showRegister(Model model) {
 		model.addAttribute("user", new User());

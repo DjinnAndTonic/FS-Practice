@@ -21,7 +21,7 @@
 			<tr>
 				<td><input type="submit" name="submitUpdate" value="Submit"></input></td>
 			</tr>
-		</table>
+		</table>	
 	</form>
 </body>
 </html>

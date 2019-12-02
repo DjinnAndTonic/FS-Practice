@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="selenium_exercises_01-0.0.1-SNAPSHOT">
+                
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+                
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+                
+        <property name="java-output-path" value="/QEModule_Selenium_Exercise_CSS_XPath/target/classes"/>
+        <property name="context-root" value="selenium_exercise_css_xpath"/>
+            
+    </wb-module>
+    
+</project-modules>

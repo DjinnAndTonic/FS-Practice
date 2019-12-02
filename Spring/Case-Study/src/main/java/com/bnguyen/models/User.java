@@ -22,7 +22,13 @@ public class User {
 	private Integer role;
 	
 	public User() {}
-
+	
+	public User(@Email @Size(min = 2, max = 50, message = "Username/email must be between 2 and 50 characters.") @NotBlank(message = "Username/email is required.") String username,
+			@NotBlank(message = "Password is required.") String password) {
+		this.username=username;
+		this.password=password;
+	}
+	
 	public User(Integer userId,
 			@Email @Size(min = 2, max = 50, message = "Username/email must be between 2 and 50 characters.") @NotBlank(message = "Username/email is required.") String username,
 			@NotBlank(message = "Password is required.") String password, Integer role) {
@@ -62,7 +68,13 @@ public class User {
 
 	public void setRole(Integer role) {
 		this.role = role;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", role=" + role + "]";
 	};
+	
 	
 	
 }

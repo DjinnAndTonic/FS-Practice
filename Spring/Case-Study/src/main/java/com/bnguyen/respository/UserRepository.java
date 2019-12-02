@@ -1,6 +1,6 @@
 package com.bnguyen.respository;
 
-import com.perscholas.hibernate_validation_repository.models.User;
+import com.bnguyen.models.User;
 
 public interface UserRepository {
 	void addUser(User u);

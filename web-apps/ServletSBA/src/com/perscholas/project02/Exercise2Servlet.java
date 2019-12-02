@@ -82,6 +82,8 @@ public class Exercise2Servlet extends HttpServlet {
 								
 				udao.updateUser(updatedUser);
 				
+				System.out.println("Updated USER: " + updatedUser);
+				
 				HttpSession session = request.getSession();
 				session.setAttribute("currentUser", udao.findUserByName(newUsername));
 				
@@ -99,7 +101,7 @@ public class Exercise2Servlet extends HttpServlet {
 			String username = request.getParameter("username");
 			String password = request.getParameter("password");
 			
-			System.out.println(username + "\n" + password);
+			System.out.println("SUBMIT FORM: " + username + "\n" + password);
 			
 			try {
 				UserDAO udao = new UserDAO();
@@ -125,7 +127,7 @@ public class Exercise2Servlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+						
 			doGet(request, response);
 		}
 	}

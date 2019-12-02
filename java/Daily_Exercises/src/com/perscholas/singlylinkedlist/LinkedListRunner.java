@@ -21,7 +21,7 @@ public class LinkedListRunner {
 		System.out.println(sll + "size: " + sll.getLength());
 		
 		System.out.println();
-		sll.add(15, 0);
+		sll.add(15, 3);
 		System.out.println(sll + "size: " + sll.getLength());
 		
 		System.out.println();

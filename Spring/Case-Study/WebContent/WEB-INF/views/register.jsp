@@ -9,18 +9,20 @@
 </head>
 <body>
 	<h1>Register Page</h1>
-	<form:form action="${pageContext.request.contextPath}/login" 
-	  method="post" modelAttribute="user">
+	<form:form action="${pageContext.request.contextPath}/verifyRegister" 
+	  method="post" modelAttribute="userDetail">
 	  	<fieldset>
 		<table>
 			<tr>
 				<td><label for="firstName">First Name: </label></td>
 				<td><form:input type="text" path="firstName" required="required"/></td>
+				<td><p style="color:red;"><form:errors path="firstName" class="error"/></p></td>
+				
 			</tr>
 			
 			<tr>
 				<td><label for="middleName">Middle Name: </label></td>
-				<td><form:input type="text" path="middleName" required="required"/></td>
+				<td><form:input type="text" path="middleName"/></td>
 			</tr>
 			
 			<tr>
@@ -39,13 +41,14 @@
 			</tr>
 			
 			<tr>
-				<td><label for="genderPronoun">Preferred Name: </label></td>
-				<td><form:input type="text" path="genderPronoun" required="required"/></td>
+				<td><label for="genderPronoun">Gender Pronoun: </label></td>
+				<td><form:input type="text" path="genderPronoun"/></td>
 			</tr>
 			
 			<tr>
 				<td><label for="email">Email: </label></td>
 				<td><form:input type="text" path="email" required="required"/></td>
+				<td><p style="color:red;"><form:errors path="email" class="error"/></p></td>
 			</tr>
 			
 			<tr>
@@ -70,20 +73,20 @@
 			
 			<tr>
 				<td><label for="zip">ZIP Code: </label></td>
-				<td><form:input type="number" path="zip" required="required"/></td>
+				<td><form:input type="number" path="zip" maxlength="5" required="required"/></td>
 			</tr>
 			
-			<tr>
-				<td><label for="date">Date: </label></td>
-				<td><form:input type="date" path="date" required="required"/></td>
-			</tr>
+<!-- 			<tr> -->
+<!-- 				<td><label for="dob">Date: </label></td> -->
+<%-- 				<td><form:input type="date" path="dob" required="required"/></td> --%>
+<!-- 			</tr> -->
 			
 			<tr> 
 				<td><input type="submit"></td>
 				<td><input type="reset"></td>
 			</tr>
 			<tr>
-				<td><a href="${pageContext.request.contextPath}/register">Register</a></td>
+				<td><a href="${pageContext.request.contextPath}/login">Login</a></td>
 			</tr>
 		</table>
 		</fieldset>

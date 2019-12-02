@@ -30,11 +30,12 @@ public class SinglyLinkedList {
 		increment();
 	}
 	
+	// Insert
 	public void add(Object value, int index) {
 		Node tmp = new Node(value);
 		Node cur = head;
 		
-		System.out.println("Adding " + value + " at index " + index);
+		System.out.println("Adding " + value + " after index " + index);
 		
 		if(cur != null) {
 			

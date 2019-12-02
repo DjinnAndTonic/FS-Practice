@@ -12,6 +12,7 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.bnguyen.models.User;
 import com.bnguyen.respository.UserRepository;
 
 
@@ -49,8 +50,7 @@ public class MariaDbUserRepository implements UserRepository{
 		try {
 			u = (User)mariaDbJdbcTemplate.queryForObject(
 					query, params, new UserMapper());
-		} catch(EmptyResultDataAccessException e)
-		{
+		} catch(EmptyResultDataAccessException e) {
 			System.out.println(e.getMessage());
 		}
 		
@@ -61,8 +61,8 @@ public class MariaDbUserRepository implements UserRepository{
 		@Override
 		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 			User user = new User();
-			user.setUsername(rs.getString(1));
-			user.setPassword(rs.getString(2));
+			user.setUsername(rs.getString("username"));
+			user.setPassword(rs.getString("password"));
 			return user;
 		}
 	}
